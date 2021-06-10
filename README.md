@@ -19,7 +19,7 @@ Both _WeatherDataProcessor_ and _FootballDataProcessor_ are using the same metho
 * Separation of concerns to support different file formats
 * Using InputStreams to support different data sources
 * Using an abstract class for the _DataProcessors_ to reduce redundant code
-
+* Using an interface for the actual future _Readers_ to provide the minimum structure
 
 
 ## Architecture
