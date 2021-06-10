@@ -6,22 +6,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class WeatherDataProcessor implements DataProcessor {
-    public List<String[]> data;
-
+public class WeatherDataProcessor extends DataProcessor {
     public WeatherDataProcessor(Reader reader) {
-        this.data = reader.read();
+        super(reader);
     }
 
-    @Override
-    public int calculateSpread(int columnGreater, int columnSmaller) {
-        String[] arrTMP;
-        List<Double> resultList = new ArrayList<>();;
 
-        for (int i = 1; i < data.size(); i++) {
-            arrTMP = data.get(i);
-            resultList.add(Double.valueOf(arrTMP[columnGreater]) - Double.valueOf(arrTMP[columnSmaller]));
-        }
+    public int calcMinTemperatureSpread(int columnGreater, int columnSmaller) {
+
+        List<Double> resultList = calculateSpread(columnGreater, columnSmaller);
 
         int indexOfMinSpreadDay = resultList.indexOf(Collections.min(resultList)) + 1;
         return indexOfMinSpreadDay;

@@ -27,7 +27,7 @@ public final class App {
         String FILEPATH_WEATHER = "src/main/resources/de/exxcellent/challenge/weather.csv";
         WeatherDataProcessor weatherDataProcessor = new WeatherDataProcessor(new ReaderCSV(FILEPATH_WEATHER));
 
-        int dayWithSmallestTempSpread = weatherDataProcessor.calculateSpread(1,2);
+        int dayWithSmallestTempSpread = weatherDataProcessor.calcMinTemperatureSpread(1,2);
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
     }
 

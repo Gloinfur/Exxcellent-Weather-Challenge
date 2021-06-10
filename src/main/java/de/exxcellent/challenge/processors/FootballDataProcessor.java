@@ -2,17 +2,21 @@ package de.exxcellent.challenge.processors;
 
 import de.exxcellent.challenge.readers.Reader;
 
+import javax.xml.crypto.Data;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public abstract class DataProcessor {
-    protected List<String[]> data;
+public class FootballDataProcessor {
+    public List<String[]> data;
 
-    public DataProcessor(Reader reader) {
+    public FootballDataProcessor(Reader reader) {
         this.data = reader.read();
     }
 
-    public List<Double> calculateSpread(int columnGreater, int columnSmaller) {
+
+    public int calculateSpread(int columnGreater, int columnSmaller) {
+        // columns 6 7
         String[] arrTMP;
         List<Double> resultList = new ArrayList<>();;
 
@@ -21,6 +25,8 @@ public abstract class DataProcessor {
             resultList.add(Double.valueOf(arrTMP[columnGreater]) - Double.valueOf(arrTMP[columnSmaller]));
         }
 
-        return resultList;
+
+        int indexOfMinSpreadTeam = resultList.indexOf(Collections.min(resultList)) + 1;
+        return indexOfMinSpreadTeam;
     }
 }
