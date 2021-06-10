@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Reader for CSV files
+ */
 public class ReaderCSV implements Reader{
     private String filePath;
 
@@ -20,12 +23,12 @@ public class ReaderCSV implements Reader{
         List<String[]> data = new ArrayList<>();
 
         try {
-            BufferedReader readerWeather = new BufferedReader(new FileReader(filePath));
-            while ((line = readerWeather.readLine()) != null) {
+            BufferedReader reader = new BufferedReader(new FileReader(filePath));
+            while ((line = reader.readLine()) != null) {
                 dataRow = line.split(",");
                 data.add(dataRow);
             }
-            readerWeather.close();
+            reader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

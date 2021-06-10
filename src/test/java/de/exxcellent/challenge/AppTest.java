@@ -1,14 +1,12 @@
 package de.exxcellent.challenge;
 
+import de.exxcellent.challenge.processors.FootballDataProcessor;
 import de.exxcellent.challenge.processors.WeatherDataProcessor;
 import de.exxcellent.challenge.readers.ReaderCSV;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -53,7 +51,7 @@ class AppTest {
 
     @Test
     void testReadFile() {
-        String line = "";
+        String line;
         String[] lastRowWeather = new String[0];
         String[] lastRowFootball = new String[0];
         try {
@@ -73,7 +71,6 @@ class AppTest {
             e.printStackTrace();
         }
 
-        // Results
         assertEquals("1022.7", lastRowWeather[lastRowWeather.length -1]);
         assertEquals("28", lastRowFootball[lastRowFootball.length -1]);
     }
@@ -89,9 +86,11 @@ class AppTest {
     }
 
     @Test
-    void testCalculateSpread() {
+    void testCalculateSpread() throws IOException {
         WeatherDataProcessor weatherDataProcessor = new WeatherDataProcessor(new ReaderCSV(FILEPATH_WEATHER));
+        FootballDataProcessor footballDataProcessor = new FootballDataProcessor(new ReaderCSV(FILEPATH_FOOTBALL));
 
-        assertEquals(14, weatherDataProcessor.calcMinTemperatureSpread(1,2));
+        assertEquals(14, weatherDataProcessor.calcMinTemperatureSpread());
+        assertEquals("Aston_Villa", footballDataProcessor.calcTeamWithMinAbsoluteDifference());
     }
 }
