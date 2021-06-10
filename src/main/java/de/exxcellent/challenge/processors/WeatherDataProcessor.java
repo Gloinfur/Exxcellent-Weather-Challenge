@@ -13,17 +13,14 @@ public class WeatherDataProcessor implements DataProcessor {
         this.data = reader.read();
     }
 
-
     @Override
-    public int calculateSpread() {
-        int columnMxT = 1;
-        int columnMnT = 2;
+    public int calculateSpread(int columnGreater, int columnSmaller) {
         String[] arrTMP;
         List<Double> resultList = new ArrayList<>();;
 
         for (int i = 1; i < data.size(); i++) {
             arrTMP = data.get(i);
-            resultList.add(Double.valueOf(arrTMP[columnMxT]) - Double.valueOf(arrTMP[columnMnT]));
+            resultList.add(Double.valueOf(arrTMP[columnGreater]) - Double.valueOf(arrTMP[columnSmaller]));
         }
 
         int indexOfMinSpreadDay = resultList.indexOf(Collections.min(resultList)) + 1;
