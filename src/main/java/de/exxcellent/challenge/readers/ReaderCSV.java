@@ -1,8 +1,6 @@
 package de.exxcellent.challenge.readers;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,10 +8,10 @@ import java.util.List;
  * Reader for CSV files
  */
 public class ReaderCSV implements Reader{
-    private String filePath;
+    private InputStream inputStream;
 
-    public ReaderCSV(String filePath) {
-        this.filePath = filePath;
+    public ReaderCSV(InputStream inputStream) {
+        this.inputStream = inputStream;
     }
 
     @Override
@@ -23,7 +21,7 @@ public class ReaderCSV implements Reader{
         List<String[]> data = new ArrayList<>();
 
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(filePath));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
             while ((line = reader.readLine()) != null) {
                 dataRow = line.split(",");
                 data.add(dataRow);

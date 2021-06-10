@@ -5,6 +5,7 @@ import de.exxcellent.challenge.processors.WeatherDataProcessor;
 import de.exxcellent.challenge.readers.ReaderCSV;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * The entry class for your solution. This class is only aimed as starting point and not intended as baseline for your software
@@ -27,11 +28,12 @@ public final class App {
      * Starts challenge task 1: Determine the day with the minimal spread between the maxTemperature and minTemperature from the given data
      */
     public static void weatherTask() {
-        String FILEPATH_WEATHER = "src/main/resources/de/exxcellent/challenge/weather.csv";
+        InputStream weatherInputStream = App.class.getResourceAsStream("./weather.csv");
+        //String FILEPATH_WEATHER = "src/main/resources/de/exxcellent/challenge/weather.csv";
         WeatherDataProcessor weatherDataProcessor = null;
 
         try {
-            weatherDataProcessor = new WeatherDataProcessor(new ReaderCSV(FILEPATH_WEATHER));
+            weatherDataProcessor = new WeatherDataProcessor(new ReaderCSV(weatherInputStream));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -44,11 +46,12 @@ public final class App {
      * Starts challenge task 2: Determine the team with the minimal spread (absolute difference) between scored goals ('Goals') and received goals ('Goals allowed') from the given data.
      */
     public static void footballTask() {
-        String FILEPATH_FOOTBALL = "src/main/resources/de/exxcellent/challenge/football.csv";
+        InputStream footballInputStream = App.class.getResourceAsStream("./football.csv");
+        //String FILEPATH_FOOTBALL = "src/main/resources/de/exxcellent/challenge/football.csv";
         FootballDataProcessor footballDataProcessor = null;
 
         try {
-            footballDataProcessor = new FootballDataProcessor(new ReaderCSV(FILEPATH_FOOTBALL));
+            footballDataProcessor = new FootballDataProcessor(new ReaderCSV(footballInputStream));
         } catch (IOException e) {
             e.printStackTrace();
         }

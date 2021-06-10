@@ -35,8 +35,8 @@ class AppTest {
     }
 
     //My tests
-    private String FILEPATH_WEATHER = "src/main/resources/de/exxcellent/challenge/weather.csv";
-    private String FILEPATH_FOOTBALL = "src/main/resources/de/exxcellent/challenge/football.csv";
+    private InputStream INPUTSTREAM_WEATHER = App.class.getResourceAsStream("./weather.csv");
+    private InputStream INPUTSTREAM_FOOTBALL = App.class.getResourceAsStream("./football.csv");
 
     /**
      * Checks for the correct files with correct data. In this case only the last entry from the last column and row gets compared.
@@ -55,13 +55,13 @@ class AppTest {
         String[] lastRowWeather = new String[0];
         String[] lastRowFootball = new String[0];
         try {
-            BufferedReader readerWeather = new BufferedReader(new FileReader(FILEPATH_WEATHER));
+            BufferedReader readerWeather = new BufferedReader(new InputStreamReader(INPUTSTREAM_WEATHER));
             while ((line = readerWeather.readLine()) != null) {
                 lastRowWeather = line.split(",");
             }
             readerWeather.close();
 
-            BufferedReader readerFootball = new BufferedReader(new FileReader(FILEPATH_FOOTBALL));
+            BufferedReader readerFootball = new BufferedReader(new InputStreamReader(INPUTSTREAM_FOOTBALL));
             while ((line = readerFootball.readLine()) != null) {
                 lastRowFootball = line.split(",");
             }
@@ -77,7 +77,7 @@ class AppTest {
 
     @Test
     void testReaderCSV() {
-        ReaderCSV readerCSV = new ReaderCSV(FILEPATH_WEATHER);
+        ReaderCSV readerCSV = new ReaderCSV(INPUTSTREAM_WEATHER);
         List<String[]> data = readerCSV.read();
 
         assertEquals("Day", data.get(0)[0]);
@@ -87,8 +87,8 @@ class AppTest {
 
     @Test
     void testCalculateSpread() throws IOException {
-        WeatherDataProcessor weatherDataProcessor = new WeatherDataProcessor(new ReaderCSV(FILEPATH_WEATHER));
-        FootballDataProcessor footballDataProcessor = new FootballDataProcessor(new ReaderCSV(FILEPATH_FOOTBALL));
+        WeatherDataProcessor weatherDataProcessor = new WeatherDataProcessor(new ReaderCSV(INPUTSTREAM_WEATHER));
+        FootballDataProcessor footballDataProcessor = new FootballDataProcessor(new ReaderCSV(INPUTSTREAM_FOOTBALL));
 
         assertEquals(14, weatherDataProcessor.calcMinTemperatureSpread());
         assertEquals("Aston_Villa", footballDataProcessor.calcTeamWithMinAbsoluteDifference());
