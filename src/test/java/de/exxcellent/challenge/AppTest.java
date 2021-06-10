@@ -92,6 +92,6 @@ class AppTest {
     void testCalculateSpread() {
         WeatherDataProcessor weatherDataProcessor = new WeatherDataProcessor(new ReaderCSV(FILEPATH_WEATHER));
 
-        assertEquals(0, weatherDataProcessor.calculateSpread());
+        assertEquals(14, weatherDataProcessor.calculateSpread());
     }
 }

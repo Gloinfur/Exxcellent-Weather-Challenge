@@ -1,5 +1,8 @@
 package de.exxcellent.challenge;
 
+import de.exxcellent.challenge.processors.WeatherDataProcessor;
+import de.exxcellent.challenge.readers.ReaderCSV;
+
 /**
  * The entry class for your solution. This class is only aimed as starting point and not intended as baseline for your software
  * design. Read: create your own classes and packages as appropriate.
@@ -21,7 +24,10 @@ public final class App {
      * Starts challenge task 1: Determine the day with the minimal spread between the maxTemperature and minTemperature from the given data
      */
     public static void weatherTask() {
-        String dayWithSmallestTempSpread = "Someday";     // Your day analysis function call …
+        String FILEPATH_WEATHER = "src/main/resources/de/exxcellent/challenge/weather.csv";
+        WeatherDataProcessor weatherDataProcessor = new WeatherDataProcessor(new ReaderCSV(FILEPATH_WEATHER));
+
+        int dayWithSmallestTempSpread = weatherDataProcessor.calculateSpread();
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
     }
 
@@ -34,6 +40,7 @@ public final class App {
      * 5 is the smallest difference between scored goals and received goals.
      */
     public static void footballTask() {
+        String FILEPATH_FOOTBALL = "src/main/resources/de/exxcellent/challenge/football.csv";
         String teamWithSmallestGoalSpread = "A good team"; // Your goal analysis function call …
         System.out.printf("Team with smallest goal spread       : %s%n", teamWithSmallestGoalSpread);
     }
