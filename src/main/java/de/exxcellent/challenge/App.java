@@ -29,7 +29,6 @@ public final class App {
      */
     public static void weatherTask() {
         InputStream weatherInputStream = App.class.getResourceAsStream("./weather.csv");
-        //String FILEPATH_WEATHER = "src/main/resources/de/exxcellent/challenge/weather.csv";
         WeatherDataProcessor weatherDataProcessor = null;
 
         try {
@@ -47,7 +46,6 @@ public final class App {
      */
     public static void footballTask() {
         InputStream footballInputStream = App.class.getResourceAsStream("./football.csv");
-        //String FILEPATH_FOOTBALL = "src/main/resources/de/exxcellent/challenge/football.csv";
         FootballDataProcessor footballDataProcessor = null;
 
         try {
