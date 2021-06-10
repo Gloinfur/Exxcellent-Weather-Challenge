@@ -2,12 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78c60686-4bd7-4ff7-bddf-cef7fb4e2380" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/exxcellent/challenge/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/exxcellent/challenge/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/exxcellent/challenge/processors/DataProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/exxcellent/challenge/processors/DataProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/exxcellent/challenge/readers/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/exxcellent/challenge/readers/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/exxcellent/challenge/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/exxcellent/challenge/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,6 +32,96 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RunManager" selected="JUnit.AppTest">
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.exxcellent.challenge.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.exxcellent.challenge" />
+      <option name="MAIN_CLASS_NAME" value="de.exxcellent.challenge.AppTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testCalculateSpread" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.exxcellent.challenge.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.exxcellent.challenge" />
+      <option name="MAIN_CLASS_NAME" value="de.exxcellent.challenge.AppTest" />
+      <option name="METHOD_NAME" value="testCalculateSpread" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testDataSource" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.exxcellent.challenge.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.exxcellent.challenge" />
+      <option name="MAIN_CLASS_NAME" value="de.exxcellent.challenge.AppTest" />
+      <option name="METHOD_NAME" value="testDataSource" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testReadFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.exxcellent.challenge.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.exxcellent.challenge" />
+      <option name="MAIN_CLASS_NAME" value="de.exxcellent.challenge.AppTest" />
+      <option name="METHOD_NAME" value="testReadFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testReaderCSV" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.exxcellent.challenge.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.exxcellent.challenge" />
+      <option name="MAIN_CLASS_NAME" value="de.exxcellent.challenge.AppTest" />
+      <option name="METHOD_NAME" value="testReaderCSV" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.AppTest.testReaderCSV" />
+        <item itemvalue="JUnit.AppTest.testCalculateSpread" />
+        <item itemvalue="JUnit.AppTest.testReadFile" />
+        <item itemvalue="JUnit.AppTest.testDataSource" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -33,5 +134,35 @@
       <updated>1623270375761</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1085" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1623315036181">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1085" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1040/352.-1080.1920.1040@0.0.2560.1040" timestamp="1623315036181" />
+    <state width="1234" height="281" key="GridCell.Tab.0.bottom" timestamp="1623316526775">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1234" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040/352.-1080.1920.1040@0.0.2560.1040" timestamp="1623316526775" />
+    <state width="1234" height="281" key="GridCell.Tab.0.center" timestamp="1623316526775">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1234" height="281" key="GridCell.Tab.0.center/0.0.2560.1040/352.-1080.1920.1040@0.0.2560.1040" timestamp="1623316526775" />
+    <state width="1234" height="281" key="GridCell.Tab.0.left" timestamp="1623316526774">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1234" height="281" key="GridCell.Tab.0.left/0.0.2560.1040/352.-1080.1920.1040@0.0.2560.1040" timestamp="1623316526774" />
+    <state width="1234" height="281" key="GridCell.Tab.0.right" timestamp="1623316526775">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1234" height="281" key="GridCell.Tab.0.right/0.0.2560.1040/352.-1080.1920.1040@0.0.2560.1040" timestamp="1623316526775" />
+    <state x="976" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1623309323730">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="976" y="344" key="com.intellij.ide.util.TipDialog/0.0.2560.1040/352.-1080.1920.1040@0.0.2560.1040" timestamp="1623309323730" />
+    <state x="303" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1623315989682">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="303" y="230" width="672" height="678" key="search.everywhere.popup/0.0.2560.1040/352.-1080.1920.1040@0.0.2560.1040" timestamp="1623315989682" />
   </component>
 </project>
